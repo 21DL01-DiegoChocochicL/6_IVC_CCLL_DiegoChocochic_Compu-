@@ -1,3 +1,6 @@
+
+import javax.swing.JOptionPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -5,7 +8,7 @@
 
 /**
  *
- * @author LABORATORIO
+ * @author DiegoChocochic
  */
 public class Soporte extends javax.swing.JFrame {
 
@@ -14,9 +17,10 @@ public class Soporte extends javax.swing.JFrame {
      */
     public Soporte() {
         initComponents();
-        this.setTitle("Motherboard");
+        this.setTitle("Soporte Técnico - Componentes del PC");
         this.setLocationRelativeTo(null);
         this.setResizable(false);
+        itemMotherboardActionPerformed(null);
     }
 
     /**
@@ -29,116 +33,257 @@ public class Soporte extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        Piezas = new javax.swing.JLabel();
-        NPieza = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jCheckBoxMenuItem1 = new javax.swing.JCheckBoxMenuItem();
-        jCheckBoxMenuItem2 = new javax.swing.JCheckBoxMenuItem();
-        jCheckBoxMenuItem3 = new javax.swing.JCheckBoxMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
+        menuArchivo = new javax.swing.JMenu();
+        itemAbrir = new javax.swing.JMenuItem();
+        itemGuardar = new javax.swing.JMenuItem();
+        jSeparator1 = new javax.swing.JPopupMenu.Separator();
+        itemSalir = new javax.swing.JMenuItem();
+        menuComponentes = new javax.swing.JMenu();
+        itemMotherboard = new javax.swing.JMenuItem();
+        itemProcesador = new javax.swing.JMenuItem();
+        itemRAM = new javax.swing.JMenuItem();
+        itemHDD = new javax.swing.JMenuItem();
+        itemSSD = new javax.swing.JMenuItem();
+        itemFuente = new javax.swing.JMenuItem();
+        itemGPU = new javax.swing.JMenuItem();
+        itemRed = new javax.swing.JMenuItem();
+        itemCooler = new javax.swing.JMenuItem();
+        itemVentilador = new javax.swing.JMenuItem();
+        itemSonido = new javax.swing.JMenuItem();
+        itemCMOS = new javax.swing.JMenuItem();
+        itemSATA = new javax.swing.JMenuItem();
+        itemAlimentacion = new javax.swing.JMenuItem();
+        itemBIOS = new javax.swing.JMenuItem();
+        menuAyuda = new javax.swing.JMenu();
+        itemAcercaDe = new javax.swing.JMenuItem();
+        itemCreditos = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(500, 450));
 
-        jPanel1.setBackground(new java.awt.Color(51, 102, 0));
-        jPanel1.setForeground(new java.awt.Color(51, 102, 0));
+        jPanel1.setBackground(new java.awt.Color(0, 51, 0));
 
-        Piezas.setBackground(new java.awt.Color(255, 255, 255));
-        Piezas.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        Piezas.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Nombre del Componente");
 
-        NPieza.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        NPieza.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Concepto");
+        jLabel3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Funcion");
+        jLabel4.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(94, 94, 94)
-                        .addComponent(NPieza))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(298, 298, 298)
-                        .addComponent(Piezas)))
-                .addContainerGap(412, Short.MAX_VALUE))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel3, 440, 440, 440)
+                    .addComponent(jLabel4, 440, 440, 440))
+                .addGap(20, 20, 20))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addComponent(Piezas)
-                .addGap(37, 37, 37)
-                .addComponent(NPieza)
-                .addContainerGap(422, Short.MAX_VALUE))
+                .addGap(15, 15, 15)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(15, 15, 15)
+                .addComponent(jLabel3, 70, 70, 70)
+                .addGap(15, 15, 15)
+                .addComponent(jLabel4, 70, 70, 70)
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
-        jMenu1.setText("Archivo");
+        menuArchivo.setText("Archivo");
 
-        jCheckBoxMenuItem1.setSelected(true);
-        jCheckBoxMenuItem1.setText("Abrir");
-        jMenu1.add(jCheckBoxMenuItem1);
-
-        jCheckBoxMenuItem2.setSelected(true);
-        jCheckBoxMenuItem2.setText("Guardar");
-        jMenu1.add(jCheckBoxMenuItem2);
-
-        jCheckBoxMenuItem3.setSelected(true);
-        jCheckBoxMenuItem3.setText("Salir");
-        jMenu1.add(jCheckBoxMenuItem3);
-
-        jMenuBar1.add(jMenu1);
-
-        jMenu2.setText("Imagenes");
-
-        jMenuItem1.setText("Placa Base");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        itemAbrir.setText("Abrir");
+        itemAbrir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                itemAbrirActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem1);
+        menuArchivo.add(itemAbrir);
 
-        jMenuItem2.setText("Procesador");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        itemGuardar.setText("Guardar");
+        itemGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                itemGuardarActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem2);
+        menuArchivo.add(itemGuardar);
+        menuArchivo.add(jSeparator1);
 
-        jMenuItem3.setText("Ram");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+        itemSalir.setText("Salir");
+        itemSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
+                itemSalirActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem3);
+        menuArchivo.add(itemSalir);
 
-        jMenuItem4.setText("Cooler");
-        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+        jMenuBar1.add(menuArchivo);
+
+        menuComponentes.setText("Componentes del PC");
+
+        itemMotherboard.setText("Motherboard");
+        itemMotherboard.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem4ActionPerformed(evt);
+                itemMotherboardActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem4);
+        menuComponentes.add(itemMotherboard);
 
-        jMenuItem5.setText("Fuentes de Poder");
-        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+        itemProcesador.setText("Procesador");
+        itemProcesador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem5ActionPerformed(evt);
+                itemProcesadorActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem5);
+        menuComponentes.add(itemProcesador);
 
-        jMenuBar1.add(jMenu2);
+        itemRAM.setText("Memoria RAM");
+        itemRAM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemRAMActionPerformed(evt);
+            }
+        });
+        menuComponentes.add(itemRAM);
+
+        itemHDD.setText("Disco Duro (HDD)");
+        itemHDD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemHDDActionPerformed(evt);
+            }
+        });
+        menuComponentes.add(itemHDD);
+
+        itemSSD.setText("Unidad SSD");
+        itemSSD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemSSDActionPerformed(evt);
+            }
+        });
+        menuComponentes.add(itemSSD);
+
+        itemFuente.setText("Fuente de Poder");
+        itemFuente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemFuenteActionPerformed(evt);
+            }
+        });
+        menuComponentes.add(itemFuente);
+
+        itemGPU.setText("Tarjeta de Video (GPU)");
+        itemGPU.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemGPUActionPerformed(evt);
+            }
+        });
+        menuComponentes.add(itemGPU);
+
+        itemRed.setText("Tarjeta de Red");
+        itemRed.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemRedActionPerformed(evt);
+            }
+        });
+        menuComponentes.add(itemRed);
+
+        itemCooler.setText("Cooler del Procesador");
+        itemCooler.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemCoolerActionPerformed(evt);
+            }
+        });
+        menuComponentes.add(itemCooler);
+
+        itemVentilador.setText("Ventilador del Gabinete");
+        itemVentilador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemVentiladorActionPerformed(evt);
+            }
+        });
+        menuComponentes.add(itemVentilador);
+
+        itemSonido.setText("Tarjeta de Sonido");
+        itemSonido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemSonidoActionPerformed(evt);
+            }
+        });
+        menuComponentes.add(itemSonido);
+
+        itemCMOS.setText("Batería CMOS");
+        itemCMOS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemCMOSActionPerformed(evt);
+            }
+        });
+        menuComponentes.add(itemCMOS);
+
+        itemSATA.setText("Cable SATA");
+        itemSATA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemSATAActionPerformed(evt);
+            }
+        });
+        menuComponentes.add(itemSATA);
+
+        itemAlimentacion.setText("Cable de Alimentación");
+        itemAlimentacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemAlimentacionActionPerformed(evt);
+            }
+        });
+        menuComponentes.add(itemAlimentacion);
+
+        itemBIOS.setText("BIOS / UEFI");
+        itemBIOS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemBIOSActionPerformed(evt);
+            }
+        });
+        menuComponentes.add(itemBIOS);
+
+        jMenuBar1.add(menuComponentes);
+
+        menuAyuda.setText("Ayuda");
+
+        itemAcercaDe.setText("Acerca del programa");
+        itemAcercaDe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemAcercaDeActionPerformed(evt);
+            }
+        });
+        menuAyuda.add(itemAcercaDe);
+
+        itemCreditos.setText("Créditos");
+        itemCreditos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemCreditosActionPerformed(evt);
+            }
+        });
+        menuAyuda.add(itemCreditos);
+
+        jMenuBar1.add(menuAyuda);
 
         setJMenuBar(jMenuBar1);
 
@@ -156,40 +301,145 @@ public class Soporte extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        // TODO add your handling code here:
-        NPieza.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/motherboard.png")));
-        Piezas.setText("");
-        Piezas.setText("MotherBoard");
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    private void itemAbrirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemAbrirActionPerformed
+        JOptionPane.showMessageDialog(this,
+                "Se ha abierto el archivo de configuración correctamente.",
+                "Abrir", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_itemAbrirActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        // TODO add your handling code here:
-        NPieza.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cpu.png")));
-        Piezas.setText("");
-        Piezas.setText("Proxesador");
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    private void itemGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemGuardarActionPerformed
+        JOptionPane.showMessageDialog(this,
+                "Los cambios se han guardado correctamente.",
+                "Guardar", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_itemGuardarActionPerformed
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        // TODO add your handling code here:
-        NPieza.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ram.png")));
-        Piezas.setText("");
-        Piezas.setText("Ram");
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+    private void itemSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemSalirActionPerformed
+        int respuesta = JOptionPane.showConfirmDialog(this,
+                "¿Desea salir del programa?", "Salir",
+                JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if (respuesta == JOptionPane.YES_OPTION) {
+            System.exit(0);
+        }
+    }//GEN-LAST:event_itemSalirActionPerformed
 
-    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-        // TODO add your handling code here:
-        NPieza.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cooler.png")));
-        Piezas.setText("");
-        Piezas.setText("Cooler");
-    }//GEN-LAST:event_jMenuItem4ActionPerformed
+    private void itemMotherboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemMotherboardActionPerformed
+        jLabel1.setText("Motherboard");
+        jLabel2.setIcon(new javax.swing.ImageIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/motherboard.png")).getImage().getScaledInstance(220, 140, java.awt.Image.SCALE_SMOOTH)));
+        jLabel3.setText("Concepto: Placa que interconecta todos los componentes de la PC.");
+        jLabel4.setText("Funcion: Permite la comunicación entre CPU, RAM y demás piezas.");
+    }//GEN-LAST:event_itemMotherboardActionPerformed
 
-    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
-        // TODO add your handling code here:
-        NPieza.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fuente.png")));
-        Piezas.setText("");
-        Piezas.setText("Fuente de Poder");
-    }//GEN-LAST:event_jMenuItem5ActionPerformed
+    private void itemProcesadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemProcesadorActionPerformed
+        jLabel1.setText("Procesador");
+        jLabel2.setIcon(new javax.swing.ImageIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cpu.png")).getImage().getScaledInstance(220, 140, java.awt.Image.SCALE_SMOOTH)));
+        jLabel3.setText("Concepto: Circuito que ejecuta las instrucciones de los programas.");
+        jLabel4.setText("Funcion: Procesa los datos y controla las tareas del sistema.");
+    }//GEN-LAST:event_itemProcesadorActionPerformed
+
+    private void itemRAMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemRAMActionPerformed
+        jLabel1.setText("Memoria RAM");
+        jLabel2.setIcon(new javax.swing.ImageIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ram.png")).getImage().getScaledInstance(220, 140, java.awt.Image.SCALE_SMOOTH)));
+        jLabel3.setText("Concepto: Memoria que guarda datos temporales mientras la PC funciona.");
+        jLabel4.setText("Funcion: Da acceso rápido a la información que se está usando.");
+    }//GEN-LAST:event_itemRAMActionPerformed
+
+    private void itemHDDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemHDDActionPerformed
+        jLabel1.setText("Disco Duro (HDD)");
+        jLabel2.setIcon(new javax.swing.ImageIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/hdd.png")).getImage().getScaledInstance(220, 140, java.awt.Image.SCALE_SMOOTH)));
+        jLabel3.setText("Concepto: Almacenamiento magnético con platos giratorios.");
+        jLabel4.setText("Funcion: Guarda el sistema operativo, programas y archivos.");
+    }//GEN-LAST:event_itemHDDActionPerformed
+
+    private void itemSSDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemSSDActionPerformed
+        jLabel1.setText("Unidad SSD");
+        jLabel2.setIcon(new javax.swing.ImageIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ssd.png")).getImage().getScaledInstance(220, 140, java.awt.Image.SCALE_SMOOTH)));
+        jLabel3.setText("Concepto: Almacenamiento de estado sólido con memoria flash.");
+        jLabel4.setText("Funcion: Guarda archivos con lectura y escritura muy rápidas.");
+    }//GEN-LAST:event_itemSSDActionPerformed
+
+    private void itemFuenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemFuenteActionPerformed
+        jLabel1.setText("Fuente de Poder");
+        jLabel2.setIcon(new javax.swing.ImageIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fuente.png")).getImage().getScaledInstance(220, 140, java.awt.Image.SCALE_SMOOTH)));
+        jLabel3.setText("Concepto: Convierte la corriente alterna en corriente continua.");
+        jLabel4.setText("Funcion: Suministra energía a todos los componentes de la PC.");
+    }//GEN-LAST:event_itemFuenteActionPerformed
+
+    private void itemGPUActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemGPUActionPerformed
+        jLabel1.setText("Tarjeta de Video (GPU)");
+        jLabel2.setIcon(new javax.swing.ImageIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/gpu.png")).getImage().getScaledInstance(220, 140, java.awt.Image.SCALE_SMOOTH)));
+        jLabel3.setText("Concepto: Tarjeta con procesador gráfico dedicado.");
+        jLabel4.setText("Funcion: Genera y envía la imagen que se ve en la pantalla.");
+    }//GEN-LAST:event_itemGPUActionPerformed
+
+    private void itemRedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemRedActionPerformed
+        jLabel1.setText("Tarjeta de Red");
+        jLabel2.setIcon(new javax.swing.ImageIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/red.png")).getImage().getScaledInstance(220, 140, java.awt.Image.SCALE_SMOOTH)));
+        jLabel3.setText("Concepto: Adaptador para conectarse a una red de datos.");
+        jLabel4.setText("Funcion: Envía y recibe información por la red o Internet.");
+    }//GEN-LAST:event_itemRedActionPerformed
+
+    private void itemCoolerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemCoolerActionPerformed
+        jLabel1.setText("Cooler del Procesador");
+        jLabel2.setIcon(new javax.swing.ImageIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cooler.png")).getImage().getScaledInstance(220, 140, java.awt.Image.SCALE_SMOOTH)));
+        jLabel3.setText("Concepto: Disipador con ventilador para el procesador.");
+        jLabel4.setText("Funcion: Evita que el procesador se sobrecaliente.");
+    }//GEN-LAST:event_itemCoolerActionPerformed
+
+    private void itemVentiladorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemVentiladorActionPerformed
+        jLabel1.setText("Ventilador del Gabinete");
+        jLabel2.setIcon(new javax.swing.ImageIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ventilador.png")).getImage().getScaledInstance(220, 140, java.awt.Image.SCALE_SMOOTH)));
+        jLabel3.setText("Concepto: Ventilador instalado dentro del gabinete.");
+        jLabel4.setText("Funcion: Mejora la circulación de aire dentro de la PC.");
+    }//GEN-LAST:event_itemVentiladorActionPerformed
+
+    private void itemSonidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemSonidoActionPerformed
+        jLabel1.setText("Tarjeta de Sonido");
+        jLabel2.setIcon(new javax.swing.ImageIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/sonido.png")).getImage().getScaledInstance(220, 140, java.awt.Image.SCALE_SMOOTH)));
+        jLabel3.setText("Concepto: Componente que procesa señales de audio.");
+        jLabel4.setText("Funcion: Convierte datos digitales en sonido y viceversa.");
+    }//GEN-LAST:event_itemSonidoActionPerformed
+
+    private void itemCMOSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemCMOSActionPerformed
+        jLabel1.setText("Batería CMOS");
+        jLabel2.setIcon(new javax.swing.ImageIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cmos.png")).getImage().getScaledInstance(220, 140, java.awt.Image.SCALE_SMOOTH)));
+        jLabel3.setText("Concepto: Pequeña pila ubicada en la placa base.");
+        jLabel4.setText("Funcion: Mantiene la fecha, hora y configuración del sistema.");
+    }//GEN-LAST:event_itemCMOSActionPerformed
+
+    private void itemSATAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemSATAActionPerformed
+        jLabel1.setText("Cable SATA");
+        jLabel2.setIcon(new javax.swing.ImageIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/sata.png")).getImage().getScaledInstance(220, 140, java.awt.Image.SCALE_SMOOTH)));
+        jLabel3.setText("Concepto: Cable que conecta discos a la placa base.");
+        jLabel4.setText("Funcion: Transmite datos entre la placa y el almacenamiento.");
+    }//GEN-LAST:event_itemSATAActionPerformed
+
+    private void itemAlimentacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemAlimentacionActionPerformed
+        jLabel1.setText("Cable de Alimentación");
+        jLabel2.setIcon(new javax.swing.ImageIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/alimentacion.png")).getImage().getScaledInstance(220, 140, java.awt.Image.SCALE_SMOOTH)));
+        jLabel3.setText("Concepto: Cable que lleva energía desde la fuente de poder.");
+        jLabel4.setText("Funcion: Suministra corriente a cada componente de la PC.");
+    }//GEN-LAST:event_itemAlimentacionActionPerformed
+
+    private void itemBIOSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemBIOSActionPerformed
+        jLabel1.setText("BIOS / UEFI");
+        jLabel2.setIcon(new javax.swing.ImageIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/bios.png")).getImage().getScaledInstance(220, 140, java.awt.Image.SCALE_SMOOTH)));
+        jLabel3.setText("Concepto: Firmware que se ejecuta antes del sistema operativo.");
+        jLabel4.setText("Funcion: Verifica el hardware e inicia el arranque de la PC.");
+    }//GEN-LAST:event_itemBIOSActionPerformed
+
+    private void itemAcercaDeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemAcercaDeActionPerformed
+        JOptionPane.showMessageDialog(this,
+                "Soporte Técnico - Componentes del PC\n"
+                + "Permite conocer el nombre, la imagen, el concepto\n"
+                + "y la función principal de los componentes básicos de una computadora.",
+                "Acerca del programa", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_itemAcercaDeActionPerformed
+
+    private void itemCreditosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemCreditosActionPerformed
+        JOptionPane.showMessageDialog(this,
+                "Desarrollado por: Diego Alejandro Chocochic L. \nCurso: Computación\nGuia de Aprendizaje No.3 - Componentes del PC",
+                "Créditos", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_itemCreditosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -198,7 +448,7 @@ public class Soporte extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -227,19 +477,35 @@ public class Soporte extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel NPieza;
-    private javax.swing.JLabel Piezas;
-    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
-    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem2;
-    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem3;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuItem itemAbrir;
+    private javax.swing.JMenuItem itemAcercaDe;
+    private javax.swing.JMenuItem itemAlimentacion;
+    private javax.swing.JMenuItem itemBIOS;
+    private javax.swing.JMenuItem itemCMOS;
+    private javax.swing.JMenuItem itemCooler;
+    private javax.swing.JMenuItem itemCreditos;
+    private javax.swing.JMenuItem itemFuente;
+    private javax.swing.JMenuItem itemGPU;
+    private javax.swing.JMenuItem itemGuardar;
+    private javax.swing.JMenuItem itemHDD;
+    private javax.swing.JMenuItem itemMotherboard;
+    private javax.swing.JMenuItem itemProcesador;
+    private javax.swing.JMenuItem itemRAM;
+    private javax.swing.JMenuItem itemRed;
+    private javax.swing.JMenuItem itemSATA;
+    private javax.swing.JMenuItem itemSSD;
+    private javax.swing.JMenuItem itemSalir;
+    private javax.swing.JMenuItem itemSonido;
+    private javax.swing.JMenuItem itemVentilador;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPopupMenu.Separator jSeparator1;
+    private javax.swing.JMenu menuArchivo;
+    private javax.swing.JMenu menuAyuda;
+    private javax.swing.JMenu menuComponentes;
     // End of variables declaration//GEN-END:variables
 }
