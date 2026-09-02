@@ -198,6 +198,7 @@ public class Menu extends javax.swing.JFrame {
         jTextField1.getText(),jTextField2.getText(),jTextField3.getText(),jTextField4.getText()
         });
         Eliminar();
+        javax.swing.JOptionPane.showMessageDialog(this, "Datos Guardados con Exito");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -209,6 +210,7 @@ public class Menu extends javax.swing.JFrame {
     }
     modelo.removeRow(fila);
     Eliminar();
+    javax.swing.JOptionPane.showMessageDialog(this, "Datos Eliminados Correctamente");
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -223,6 +225,7 @@ public class Menu extends javax.swing.JFrame {
     modelo.setValueAt(jTextField3.getText(), fila, 2);
     modelo.setValueAt(jTextField4.getText(), fila, 3);
     Eliminar();
+    javax.swing.JOptionPane.showMessageDialog(this, "Datos Modificados correctamente");
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
